@@ -1,0 +1,183 @@
+-----  Welcome to TCP Netw Algorithm  -------- 
+
+Enter number of msgs: Enter time betw msgs [>0.0]:Nr of msgs=10; time betw msgs=20
+
+Generate Next MSG
+
+insert Event in Lklist at time: 0
+nEvTime: 29.876 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 29.876
+aaaaaaaaaaaaaaaaaaaa
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 1 times
+TCP_LAYER: seq: 0, ack 0, checksum: 87758600
+aaaaaaaaaaaaaaaaaaaa
+*** insert Event in Lklist at time: 29.876
+nEvTime: 39.5637 EvType: 2 EvEntity: 1
+----B_input: packet 0 is correctly rcvd, send ACK!
+TCP_ProcPkt: was called: 2 times
+TCP_LAYER: seq: 0, ack 0, checksum: 1944632432
+XXXXXXXXXXXXXXXXXXXX
+*** insert Event in Lklist at time: 39.5637
+--- DATA RECEIVED: aaaaaaaaaaaaaaaaaaaa
+nEvTime: 43.8109 EvType: 2 EvEntity: 0
+nEvTime: 65.02 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 65.02
+bbbbbbbbbbbbbbbbbbbb
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 3 times
+TCP_LAYER: seq: 1, ack 0, checksum: 87758600
+bbbbbbbbbbbbbbbbbbbb
+*** insert Event in Lklist at time: 65.02
+nEvTime: 74.3675 EvType: 2 EvEntity: 1
+----B_input: packet 1 is correctly rcvd, send ACK!
+TCP_ProcPkt: was called: 4 times
+TCP_LAYER: seq: 0, ack 1, checksum: 1944632432
+XXXXXXXXXXXXXXXXXXXX
+*** insert Event in Lklist at time: 74.3675
+--- DATA RECEIVED: bbbbbbbbbbbbbbbbbbbb
+nEvTime: 83.7231 EvType: 2 EvEntity: 0
+nEvTime: 93.416 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 93.416
+cccccccccccccccccccc
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 5 times
+TCP_LAYER: seq: 2, ack 0, checksum: 87758600
+cccccccccccccccccccc
+*** insert Event in Lklist at time: 93.416
+nEvTime: 102.449 EvType: 2 EvEntity: 1
+----B_input: packet 2 is correctly rcvd, send ACK!
+TCP_ProcPkt: was called: 6 times
+TCP_LAYER: seq: 0, ack 2, checksum: 1944632432
+XXXXXXXXXXXXXXXXXXXX
+*** insert Event in Lklist at time: 102.449
+--- DATA RECEIVED: cccccccccccccccccccc
+nEvTime: 105.442 EvType: 2 EvEntity: 0
+nEvTime: 112.36 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 112.36
+dddddddddddddddddddd
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 7 times
+TCP_LAYER: seq: 3, ack 0, checksum: 87758600
+dddddddddddddddddddd
+*** insert Event in Lklist at time: 112.36
+nEvTime: 117.456 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 117.456
+eeeeeeeeeeeeeeeeeeee
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 8 times
+TCP_LAYER: seq: 4, ack 0, checksum: 87758600
+eeeeeeeeeeeeeeeeeeee
+*** insert Event in Lklist at time: 117.456
+nEvTime: 119.513 EvType: 2 EvEntity: 1
+----B_input: packet 3 is correctly rcvd, send ACK!
+TCP_ProcPkt: was called: 9 times
+TCP_LAYER: seq: 0, ack 3, checksum: 1944632432
+XXXXXXXXXXXXXXXXXXXX
+*** insert Event in Lklist at time: 119.513
+--- DATA RECEIVED: dddddddddddddddddddd
+nEvTime: 123.398 EvType: 2 EvEntity: 1
+----B_input: packet 4 is correctly rcvd, send ACK!
+TCP_ProcPkt: was called: 10 times
+TCP_LAYER: seq: 0, ack 4, checksum: 1944632432
+XXXXXXXXXXXXXXXXXXXX
+*** insert Event in Lklist at time: 123.398
+--- DATA RECEIVED: eeeeeeeeeeeeeeeeeeee
+nEvTime: 128.24 EvType: 2 EvEntity: 0
+nEvTime: 130.332 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 130.332
+ffffffffffffffffffff
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 11 times
+TCP_LAYER: seq: 5, ack 0, checksum: 87758600
+ffffffffffffffffffff
+*** insert Event in Lklist at time: 130.332
+nEvTime: 132.094 EvType: 2 EvEntity: 1
+----B_input: packet 5 is correctly rcvd, send ACK!
+TCP_ProcPkt: was called: 12 times
+TCP_LAYER: seq: 0, ack 5, checksum: 1944632432
+XXXXXXXXXXXXXXXXXXXX
+*** insert Event in Lklist at time: 132.094
+--- DATA RECEIVED: ffffffffffffffffffff
+nEvTime: 133.239 EvType: 2 EvEntity: 0
+nEvTime: 141.265 EvType: 2 EvEntity: 0
+nEvTime: 144.804 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 144.804
+gggggggggggggggggggg
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 13 times
+TCP_LAYER: seq: 6, ack 0, checksum: 87758600
+gggggggggggggggggggg
+*** insert Event in Lklist at time: 144.804
+nEvTime: 146.169 EvType: 2 EvEntity: 1
+----B_input: packet 6 is correctly rcvd, send ACK!
+TCP_ProcPkt: was called: 14 times
+TCP_LAYER: seq: 0, ack 6, checksum: 1944632432
+XXXXXXXXXXXXXXXXXXXX
+*** insert Event in Lklist at time: 146.169
+--- DATA RECEIVED: gggggggggggggggggggg
+nEvTime: 151.86 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 151.86
+hhhhhhhhhhhhhhhhhhhh
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 15 times
+TCP_LAYER: seq: 7, ack 0, checksum: 87758600
+hhhhhhhhhhhhhhhhhhhh
+*** insert Event in Lklist at time: 151.86
+nEvTime: 154.109 EvType: 2 EvEntity: 0
+nEvTime: 158.446 EvType: 2 EvEntity: 1
+----B_input: packet 7 is correctly rcvd, send ACK!
+TCP_ProcPkt: was called: 16 times
+TCP_LAYER: seq: 0, ack 7, checksum: 1944632432
+XXXXXXXXXXXXXXXXXXXX
+*** insert Event in Lklist at time: 158.446
+--- DATA RECEIVED: hhhhhhhhhhhhhhhhhhhh
+nEvTime: 159.469 EvType: 2 EvEntity: 0
+nEvTime: 184.948 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 184.948
+iiiiiiiiiiiiiiiiiiii
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 17 times
+TCP_LAYER: seq: 8, ack 0, checksum: 87758600
+iiiiiiiiiiiiiiiiiiii
+*** insert Event in Lklist at time: 184.948
+nEvTime: 193.346 EvType: 2 EvEntity: 1
+----B_input: packet 8 is correctly rcvd, send ACK!
+TCP_ProcPkt: was called: 18 times
+TCP_LAYER: seq: 0, ack 8, checksum: 1944632432
+XXXXXXXXXXXXXXXXXXXX
+*** insert Event in Lklist at time: 193.346
+--- DATA RECEIVED: iiiiiiiiiiiiiiiiiiii
+nEvTime: 193.724 EvType: 1 EvEntity: 0
+Generate Next MSG
+
+insert Event in Lklist at time: 193.724
+jjjjjjjjjjjjjjjjjjjj
+---A_output: New msg arrives, send new msg to TCP_LAYER!
+TCP_ProcPkt: was called: 19 times
+TCP_LAYER: seq: 9, ack 0, checksum: 87758600
+jjjjjjjjjjjjjjjjjjjj
+*** insert Event in Lklist at time: 193.724
+nEvTime: 196.816 EvType: 2 EvEntity: 0
+ 
+
+End of the TCP Algor. at time 196.816
+ after sending 10 msgs!!!

@@ -1,0 +1,387 @@
+
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   9999    9999
+dest 2|  9999   3    9999
+     3|  9999   9999    7
+
+At time t=0, router 0 sends packet to router 1 with: 0 1 3 7
+At time t=0, router 0 sends packet to router 2 with: 0 1 3 7
+At time t=0, router 0 sends packet to router 3 with: 0 1 3 7
+
+             via     
+   D1 |    1     2
+  ----|-----------------
+     0|  1   9999
+dest 2|  9999   1
+     3|  9999   9999
+
+At time t=0, router 1 sends packet to router 0 with: 1 0 1 9999
+At time t=0, router 1 sends packet to router 2 with: 1 0 1 9999
+
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   9999    9999
+dest 1|  9999   1    9999
+     3|  9999   9999    2
+
+At time t=0, router 2 sends packet to router 0 with: 3 1 0 2
+At time t=0, router 2 sends packet to router 1 with: 3 1 0 2
+At time t=0, router 2 sends packet to router 3 with: 3 1 0 2
+
+             via     
+   D3 |    0     2   
+  ----|-----------------
+     0|  7   9999
+dest 1|  9999   9999
+     2|  9999   2
+
+At time t=0, router 3 sends packet to router 0 with: 7 9999 2 0
+At time t=0, router 3 sends packet to router 2 with: 7 9999 2 0
+
+MAIN: rcv event, t=0.7216 at router 0
+ src:1 dest:0 contents: 1 0 1 9999
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   9999    9999
+dest 2|  2   3    9999
+     3|  9999   9999    7
+
+At time t=0.7216, router 0 sends packet to router 1 with: 0 1 2 7
+At time t=0.7216, router 0 sends packet to router 2 with: 0 1 2 7
+At time t=0.7216, router 0 sends packet to router 3 with: 0 1 2 7
+
+MAIN: rcv event, t=1.4938 at router 1
+ src:0 dest:1 contents: 0 1 3 7
+             via     
+   D1 |    1     2
+  ----|-----------------
+     0|  1   9999
+dest 2|  4   1
+     3|  8   9999
+
+At time t=1.4938, router 1 sends packet to router 0 with: 1 0 1 8
+At time t=1.4938, router 1 sends packet to router 2 with: 1 0 1 8
+
+MAIN: rcv event, t=1.7572 at router 2
+ src:0 dest:2 contents: 0 1 3 7
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   9999    9999
+dest 1|  4   1    9999
+     3|  10   9999    2
+
+
+MAIN: rcv event, t=1.9306 at router 3
+ src:0 dest:3 contents: 0 1 3 7
+             via     
+   D3 |    0     2   
+  ----|-----------------
+     0|  7   9999
+dest 1|  8   9999
+     2|  10   2
+
+At time t=1.9306, router 3 sends packet to router 0 with: 7 8 2 0
+At time t=1.9306, router 3 sends packet to router 2 with: 7 8 2 0
+
+MAIN: rcv event, t=2.5766 at router 0
+ src:2 dest:0 contents: 3 1 0 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   4    9999
+dest 2|  2   3    9999
+     3|  9999   5    7
+
+At time t=2.5766, router 0 sends packet to router 1 with: 0 1 2 5
+At time t=2.5766, router 0 sends packet to router 2 with: 0 1 2 5
+At time t=2.5766, router 0 sends packet to router 3 with: 0 1 2 5
+
+MAIN: rcv event, t=2.8778 at router 3
+ src:2 dest:3 contents: 3 1 0 2
+             via     
+   D3 |    0     2   
+  ----|-----------------
+     0|  7   5
+dest 1|  8   3
+     2|  10   2
+
+At time t=2.8778, router 3 sends packet to router 0 with: 5 3 2 0
+At time t=2.8778, router 3 sends packet to router 2 with: 5 3 2 0
+
+MAIN: rcv event, t=3.177 at router 2
+ src:1 dest:2 contents: 1 0 1 9999
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    9999
+dest 1|  4   1    9999
+     3|  10   9999    2
+
+At time t=3.177, router 2 sends packet to router 0 with: 2 1 0 2
+At time t=3.177, router 2 sends packet to router 1 with: 2 1 0 2
+At time t=3.177, router 2 sends packet to router 3 with: 2 1 0 2
+
+MAIN: rcv event, t=3.3506 at router 1
+ src:2 dest:1 contents: 3 1 0 2
+             via     
+   D1 |    1     2
+  ----|-----------------
+     0|  1   4
+dest 2|  4   1
+     3|  8   3
+
+At time t=3.3506, router 1 sends packet to router 0 with: 1 0 1 3
+At time t=3.3506, router 1 sends packet to router 2 with: 1 0 1 3
+
+MAIN: rcv event, t=3.5216 at router 3
+ src:0 dest:3 contents: 0 1 2 7
+             via     
+   D3 |    0     2   
+  ----|-----------------
+     0|  7   5
+dest 1|  8   3
+     2|  9   2
+
+
+MAIN: rcv event, t=3.6054 at router 1
+ src:0 dest:1 contents: 0 1 2 7
+             via     
+   D1 |    1     2
+  ----|-----------------
+     0|  1   4
+dest 2|  3   1
+     3|  8   3
+
+
+MAIN: rcv event, t=3.6198 at router 2
+ src:3 dest:2 contents: 7 9999 2 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    9
+dest 1|  4   1    9999
+     3|  10   9999    2
+
+
+MAIN: rcv event, t=3.7748 at router 1
+ src:0 dest:1 contents: 0 1 2 5
+             via     
+   D1 |    1     2
+  ----|-----------------
+     0|  1   4
+dest 2|  3   1
+     3|  6   3
+
+
+MAIN: rcv event, t=3.8744 at router 3
+ src:0 dest:3 contents: 0 1 2 5
+             via     
+   D3 |    0     2   
+  ----|-----------------
+     0|  7   5
+dest 1|  8   3
+     2|  9   2
+
+
+MAIN: rcv event, t=3.8794 at router 3
+ src:2 dest:3 contents: 2 1 0 2
+             via     
+   D3 |    0     2   
+  ----|-----------------
+     0|  7   4
+dest 1|  8   3
+     2|  9   2
+
+At time t=3.8794, router 3 sends packet to router 0 with: 4 3 2 0
+At time t=3.8794, router 3 sends packet to router 2 with: 4 3 2 0
+
+MAIN: rcv event, t=4.3618 at router 0
+ src:3 dest:0 contents: 7 9999 2 0
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   4    9999
+dest 2|  2   3    9
+     3|  9999   5    7
+
+
+MAIN: rcv event, t=4.9872 at router 2
+ src:0 dest:2 contents: 0 1 2 7
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    9
+dest 1|  4   1    9999
+     3|  10   9999    2
+
+
+MAIN: rcv event, t=5.0028 at router 0
+ src:1 dest:0 contents: 1 0 1 8
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   4    9999
+dest 2|  2   3    9
+     3|  9   5    7
+
+
+MAIN: rcv event, t=5.0162 at router 1
+ src:2 dest:1 contents: 2 1 0 2
+             via     
+   D1 |    1     2
+  ----|-----------------
+     0|  1   3
+dest 2|  3   1
+     3|  6   3
+
+
+MAIN: rcv event, t=5.8916 at router 0
+ src:3 dest:0 contents: 7 8 2 0
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   4    15
+dest 2|  2   3    9
+     3|  9   5    7
+
+
+MAIN: rcv event, t=5.9728 at router 0
+ src:3 dest:0 contents: 5 3 2 0
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   4    10
+dest 2|  2   3    9
+     3|  9   5    7
+
+
+MAIN: rcv event, t=6.7042 at router 2
+ src:1 dest:2 contents: 1 0 1 8
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    9
+dest 1|  4   1    9999
+     3|  10   9    2
+
+
+MAIN: rcv event, t=7.4278 at router 2
+ src:3 dest:2 contents: 7 8 2 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    9
+dest 1|  4   1    10
+     3|  10   9    2
+
+
+MAIN: rcv event, t=7.6272 at router 0
+ src:2 dest:0 contents: 2 1 0 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   4    10
+dest 2|  2   3    9
+     3|  9   5    7
+
+
+MAIN: rcv event, t=8.066 at router 0
+ src:1 dest:0 contents: 1 0 1 3
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   4    10
+dest 2|  2   3    9
+     3|  4   5    7
+
+At time t=8.066, router 0 sends packet to router 1 with: 0 1 2 4
+At time t=8.066, router 0 sends packet to router 2 with: 0 1 2 4
+At time t=8.066, router 0 sends packet to router 3 with: 0 1 2 4
+
+MAIN: rcv event, t=8.6148 at router 0
+ src:3 dest:0 contents: 4 3 2 0
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|  1   4    10
+dest 2|  2   3    9
+     3|  4   5    7
+
+
+MAIN: rcv event, t=8.6968 at router 1
+ src:0 dest:1 contents: 0 1 2 4
+             via     
+   D1 |    1     2
+  ----|-----------------
+     0|  1   3
+dest 2|  3   1
+     3|  5   3
+
+
+MAIN: rcv event, t=8.989 at router 2
+ src:0 dest:2 contents: 0 1 2 5
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    9
+dest 1|  4   1    10
+     3|  8   9    2
+
+
+MAIN: rcv event, t=9.5696 at router 3
+ src:0 dest:3 contents: 0 1 2 4
+             via     
+   D3 |    0     2   
+  ----|-----------------
+     0|  7   4
+dest 1|  8   3
+     2|  9   2
+
+
+MAIN: rcv event, t=10.5312 at router 2
+ src:3 dest:2 contents: 5 3 2 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    7
+dest 1|  4   1    5
+     3|  8   9    2
+
+
+MAIN: rcv event, t=12.1752 at router 2
+ src:1 dest:2 contents: 1 0 1 3
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    7
+dest 1|  4   1    5
+     3|  8   4    2
+
+
+MAIN: rcv event, t=12.5314 at router 2
+ src:3 dest:2 contents: 4 3 2 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    6
+dest 1|  4   1    5
+     3|  8   4    2
+
+
+MAIN: rcv event, t=13.5078 at router 2
+ src:0 dest:2 contents: 0 1 2 4
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|  3   2    6
+dest 1|  4   1    5
+     3|  7   4    2
+
+
+End of the Dist. Vect. Routing Algor. at t=13.5078; No more changes occured in the Routing Tables of all our routers!!!
+
